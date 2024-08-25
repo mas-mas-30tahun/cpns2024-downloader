@@ -1,0 +1,68 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+cpns2024env/
+
+# Distribution / packaging
+.Python
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Flask
+instance/
+.webassets-cache
+
+# Static and template caches
+staticfiles/
+templates_c/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Sphinx documentation
+docs/_build/
+
+# Coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Profiling data
+.prof
+
+# Pyre type checker
+.pyre/
+
+# Pytype type checker
+.pytype/
+
+# Python packaging files
+pip-log.txt
+pip-delete-this-directory.txt

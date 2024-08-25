@@ -50,9 +50,9 @@ def load_tingkat_pendidikan_data():
 load_gabungan_data()
 load_tingkat_pendidikan_data()
 
-@app.route('/')
-def index():
-    return render_template('combined.html')
+# @app.route('/')
+# def index():
+#     return render_template('combined.html')
 
 @app.route('/api/tingkat_pendidikan')
 def api_tingkat_pendidikan():
@@ -68,7 +68,7 @@ def api_program_studi():
     if not tingkat_pendidikan_id:
         return jsonify({"error": "Missing tingkat_pendidikan_id parameter"}), 400
 
-    program_studi_set = {row['nama_program_studi'] for row in gabungan_data if row['tingkat_pendidikan_id'] == tingkat_pendidikan_id}
+    program_studi_set = {row['program_studi_nama'] for row in gabungan_data if row['tingkat_pendidikan_id'] == tingkat_pendidikan_id}
     program_studi = sorted(list(program_studi_set))
     return jsonify(program_studi)
 
@@ -81,7 +81,7 @@ def api_get_cepat_kode():
         return jsonify({"error": "Missing parameters"}), 400
 
     for row in gabungan_data:
-        if row['tingkat_pendidikan_id'] == tingkat_pendidikan_id and row['nama_program_studi'] == program_studi:
+        if row['tingkat_pendidikan_id'] == tingkat_pendidikan_id and row['program_studi_nama'] == program_studi:
             return jsonify({"cepat_kode": row['cepat_kode']})
 
     return jsonify({"error": "No matching cepat_kode found"}), 404
@@ -144,6 +144,10 @@ def emit_log(message):
     socketio.emit('log', {'message': message})
     logging.info(message)
     socketio.sleep(0)  # Yield control to ensure logs are sent in real-time
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

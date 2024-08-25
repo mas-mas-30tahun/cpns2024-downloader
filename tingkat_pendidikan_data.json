@@ -1,0 +1,42 @@
+[
+    {
+        "id": "10",
+        "nama": "SLTP"
+    },
+    {
+        "id": "15",
+        "nama": "SLTA"
+    },
+    {
+        "id": "17",
+        "nama": "SMK/SLTA Kejuruan"
+    },
+    {
+        "id": "18",
+        "nama": "SLTA Keguruan"
+    },
+    {
+        "id": "25",
+        "nama": "Diploma II"
+    },
+    {
+        "id": "30",
+        "nama": "Diploma III/Sarjana Muda"
+    },
+    {
+        "id": "35",
+        "nama": "Diploma IV"
+    },
+    {
+        "id": "40",
+        "nama": "S-1/Sarjana"
+    },
+    {
+        "id": "45",
+        "nama": "S-2"
+    },
+    {
+        "id": "50",
+        "nama": "S-3/Doktor"
+    }
+]
